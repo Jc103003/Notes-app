@@ -9,18 +9,16 @@
     </head>
 
     <body>
-        
         <!-- login form-->
-        <div class="form-box" id="login-form">
-            <form action="">
+        <div class="form-box">
+            <form id="login-form" action="">
                 <div class="form-header">
                     <h2>Welcome Back</h2>
                     <p>Don’t have an account yet? <button class="noBox">sign up</button></p>
                 </div>
-                <input type="text" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="text" placeholder="Email" id="login-email">
+                <input type="password" placeholder="Password" id="login-password">
                 <button type="submit"> submit </button>
-
                 <div class="divider">
                     <span>or</span>
                 </div>
@@ -41,13 +39,14 @@
                     data-logo_alignment="left">
                 </div>
             </form>
+            <p id="log"></p>
         </div>
 
         <!-- signup form-->
         <div class="form-box" style="display:none;" id="signup-form">
             <form action="">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Password">
+                <input type="text" placeholder="Email" id="signup-email">
+                <input type="text" placeholder="Password" id="signup-password">
                 <button type="submit"> submit </button>
             </form>
         </div>
