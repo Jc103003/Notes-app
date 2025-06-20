@@ -1,14 +1,17 @@
 <!DOCTYPE html >
 <html>
-<head >
+<meta name="google-signin-client_id" content="689936237935-0leuoufdn2hrete4bjvloci8jnbs3m4i.apps.googleusercontent.com">
+
+<head>
     <link rel="stylesheet" href="style/style.css" type="text/css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     
     </head>
 
     <body>
         
         <!-- login form-->
-        <div class="form-box" id="signup-form">
+        <div class="form-box" id="login-form">
             <form action="">
                 <div class="form-header">
                     <h2>Welcome Back</h2>
@@ -16,27 +19,68 @@
                 </div>
                 <input type="text" placeholder="Email">
                 <input type="password" placeholder="Password">
-                <button> submit </button>
+                <button type="submit"> submit </button>
 
                 <div class="divider">
                     <span>or</span>
-                  </div>
+                </div>
+                
+                <div id="g_id_onload"
+                    data-client_id="689936237935-0leuoufdn2hrete4bjvloci8jnbs3m4i.apps.googleusercontent.com"
+                    data-context="signin"
+                    data-ux_mode="popup"
+                    data-callback="handleCredentialResponse"
+                    data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                    data-type="standard"
+                    data-size="large"
+                    data-theme="outline"
+                    data-text="sign_in_with"
+                    data-shape="rectangular"
+                    data-logo_alignment="left">
+                </div>
             </form>
         </div>
 
         <!-- signup form-->
-        <div class="form-box" style="display:none;" id="login-form">
+        <div class="form-box" style="display:none;" id="signup-form">
             <form action="">
                 <input type="text" placeholder="Email">
                 <input type="text" placeholder="Password">
-                <button> submit </button>
+                <button type="submit"> submit </button>
             </form>
         </div>
 
         <!--notes area-->
-        <div>
-            
-        </div>
         <script src="js/script.js"></script>
+        <script>
+          window.onload = () => {
+            google.accounts.id.initialize({
+              client_id: "689936237935-0leuoufdn2hrete4bjvloci8jnbs3m4i.apps.googleusercontent.com",
+              callback: handleCredentialResponse,
+              prompt_parent_id: "login-form",
+              ux_mode: "popup"
+            });
+          };
+
+          function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            // TODO: Send this token to your backend for verification
+          }
+
+          // Toggle between login and signup forms
+          document.addEventListener('DOMContentLoaded', () => {
+            const signupBtn = document.querySelector('.noBox');
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            
+            signupBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              loginForm.style.display = 'none';
+              signupForm.style.display = 'block';
+            });
+          });
+        </script>
     </body>
 </html>
