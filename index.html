@@ -11,10 +11,10 @@
     <body>
         <!-- login form-->
         <div class="form-box">
-            <form id="login-form" action="">
+            <form id="form-login" action="">
                 <div class="form-header">
                     <h2>Welcome Back</h2>
-                    <p>Don’t have an account yet? <button class="noBox">sign up</button></p>
+                    <p>Don’t have an account yet? <button class="btn-link">sign up</button></p>
                 </div>
                 <input type="text" placeholder="Email" id="login-email">
                 <input type="password" placeholder="Password" id="login-password">
@@ -43,8 +43,8 @@
         </div>
 
         <!-- signup form-->
-        <div class="form-box" style="display:none;" id="signup-form">
-            <form action="">
+        <div class="form-box" style="display:none;" id="form-signup">
+            <form id="form-signup" action="">
                 <input type="text" placeholder="Email" id="signup-email">
                 <input type="text" placeholder="Password" id="signup-password">
                 <button type="submit"> submit </button>
@@ -58,7 +58,7 @@
             google.accounts.id.initialize({
               client_id: "689936237935-0leuoufdn2hrete4bjvloci8jnbs3m4i.apps.googleusercontent.com",
               callback: handleCredentialResponse,
-              prompt_parent_id: "login-form",
+              prompt_parent_id: "form-login",
               ux_mode: "popup"
             });
           };
@@ -70,9 +70,9 @@
 
           // Toggle between login and signup forms
           document.addEventListener('DOMContentLoaded', () => {
-            const signupBtn = document.querySelector('.noBox');
-            const loginForm = document.getElementById('login-form');
-            const signupForm = document.getElementById('signup-form');
+            const signupBtn = document.querySelector('.btn-link');
+            const loginForm = document.getElementById('form-login');
+            const signupForm = document.getElementById('form-signup');
             
             signupBtn.addEventListener('click', (e) => {
               e.preventDefault();

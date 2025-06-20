@@ -1,4 +1,4 @@
-const loginForm = document.getElementById("login-form");
+const formLogin = document.getElementById("form-login");
 
 //google sign in button
 function onSignIn(googleUser) {
@@ -9,7 +9,7 @@ function onSignIn(googleUser) {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   }
   
-  loginForm.addEventListener("submit", function (e) {
+  formLogin.addEventListener("submit", function (e) {
     e.preventDefault();
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value; 
