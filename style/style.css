@@ -38,7 +38,6 @@ body {
   -webkit-backdrop-filter: blur(10px); /* For Safari */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-
   font-size: 16px;
   gap: 0;
 }
@@ -63,7 +62,7 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 14px;
-  color: #666;
+  color: #CCC;
 }
 
 .form-header {
@@ -122,6 +121,7 @@ button:hover {
   color: #2e70f2;
   font-weight: 600;
   text-align: inherit;
+  width: 50px;
 }
 
 .btn-link:hover {
@@ -135,7 +135,7 @@ button:hover {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #888;
+  color: #CCC;
   margin: 20px 0;
 }
 
@@ -143,6 +143,6 @@ button:hover {
 .divider::after {
   content: '';
   flex: 1;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #CCC;
   margin: 0 10px;
 }
