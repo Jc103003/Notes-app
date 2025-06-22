@@ -4,6 +4,18 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --primary-color: blueviolet;
+  --primary-hover: darkviolet;
+  --background-light: rgba(255, 255, 255, 0.2);
+  --border-light: rgba(255, 255, 255, 0.4);
+  --text-light: #CCC;
+  --input-bg: #f9f9f9;
+  --input-border: #ddd;
+  --link-color: #2e70f2;
+  --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
 /* Layout and Background */
 body {
   display: flex;
@@ -31,12 +43,12 @@ body {
   margin: 5px;
   padding: 48px 48px;
 
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background-color: var(--background-light);
+  border: 1.5px solid var(--border-light);
   border-radius: 20px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px); /* For Safari */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--box-shadow);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   font-size: 16px;
   gap: 0;
@@ -62,7 +74,7 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 14px;
-  color: #CCC;
+  color: var(--text-light);
 }
 
 .form-header {
@@ -81,14 +93,19 @@ body {
 }
 
 /* Form Fields */
+inputs-div {
+  gap: 15px;
+}
+
 input {
   width: 100%;
   padding: 12px;
   font-size: 14px;
-
-  background: #f9f9f9;
-  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
   border-radius: 8px;
+  box-shadow: var(--box-shadow);
 }
 
 /* Buttons */
@@ -100,7 +117,7 @@ button {
   font-weight: bold;
   text-transform: lowercase;
 
-  background-color: blueviolet;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 4px;
@@ -109,7 +126,7 @@ button {
 }
 
 button:hover {
-  background-color: darkviolet;
+  background-color: var(--primary-hover);
 }
 
 /* Links */
@@ -118,7 +135,7 @@ button:hover {
   border: none;
   box-shadow: none;
   padding: 0;
-  color: #2e70f2;
+  color: var(--link-color);
   font-weight: 600;
   text-align: inherit;
   width: 50px;
@@ -135,7 +152,7 @@ button:hover {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #CCC;
+  color: var(--text-light);
   margin: 20px 0;
 }
 
@@ -143,6 +160,6 @@ button:hover {
 .divider::after {
   content: '';
   flex: 1;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid var(--text-light);
   margin: 0 10px;
 }
