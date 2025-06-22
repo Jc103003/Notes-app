@@ -163,3 +163,20 @@ button:hover {
   border-bottom: 1px solid var(--text-light);
   margin: 0 10px;
 }
+
+/* Password Field with Caps Lock Warning */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+#caps-lock-warning {
+  position: absolute;
+  right: 12px;
+  bottom: 50%;
+  font-size: 12px;
+  color: red;
+  display: none;
+  pointer-events: none;
+  background-color: transparent;
+}
