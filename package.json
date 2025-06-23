@@ -1,0 +1,23 @@
+{
+  "name": "simple_auth_notes_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jc103003/Notes-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jc103003/Notes-app/issues"
+  },
+  "homepage": "https://github.com/Jc103003/Notes-app#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.0.2"
+  }
+}
