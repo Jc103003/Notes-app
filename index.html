@@ -17,12 +17,18 @@
                     <h2>Welcome Back</h2>
                     <p>Don’t have an account yet? <button class="btn-link">sign up</button></p>
                 </div>
-                <label for="Email">Email</label>
-                <input type="text" id="login-email">
-                <label for="Password">Password</label>
+                <label for="Email" class="input-label-email">Email</label>
+                <input type="email" id="login-email" required>
+                <div class="error-msg" id="email-error">
+                    <span>Please enter a valid email address</span>
+                </div>
+                <label for="Password" class="input-label-password">Password</label>
                 <div class="password-field">
-                    <input type="password" id="login-password" onkeydown="checkCapsLock(event)" onkeyup="checkCapsLock(event)">
+                    <input type="password" id="login-password" onkeydown="checkCapsLock(event)" onkeyup="checkCapsLock(event)" required>
                     <img id="caps-lock-warning" src="assets/caps-warning.png" alt="Caps Lock Warning">
+                </div>
+                <div class="error-msg">
+                  
                 </div>
                 <button type="submit"> submit </button>
                 <div class="divider">
