@@ -92,7 +92,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* Form Fields */
 inputs-div {
   gap: 15px;
 }
@@ -108,7 +107,6 @@ input {
   box-shadow: var(--box-shadow);
 }
 
-/* Buttons */
 button {
   width: 100%;
   padding: 12px;
@@ -129,7 +127,6 @@ button:hover {
   background-color: var(--primary-hover);
 }
 
-/* Links */
 .btn-link {
   background: none;
   border: none;
@@ -147,7 +144,6 @@ button:hover {
   transition: transform 0.2s ease-in-out;
 }
 
-/* Dividers */
 .divider {
   display: flex;
   align-items: center;
@@ -164,7 +160,6 @@ button:hover {
   margin: 0 10px;
 }
 
-/* Password Field with Caps Lock Warning */
 .password-field {
   position: relative;
   width: 100%;
@@ -172,11 +167,11 @@ button:hover {
 
 #caps-lock-warning {
   position: absolute;
-  right: 12px;
+  right: 0px;
   bottom: 50%;
-  font-size: 12px;
-  color: red;
+  transform: translateY(50%);
+  width: 30px;
+  height: 30px;
   display: none;
   pointer-events: none;
-  background-color: transparent;
 }
