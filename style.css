@@ -94,7 +94,7 @@ inputs-div {
 }
 
 input {
-  width: 90%;
+  width: 100%;
   padding: 12px;
   font-size: 14px;
   margin-bottom: 15px;
@@ -165,7 +165,7 @@ button:hover {
 #caps-lock-warning {
   position: absolute;
   right: 0px;
-  bottom: 50%;
+  bottom: 58%;
   transform: translateY(50%);
   width: 30px;
   height: 30px;
@@ -180,10 +180,10 @@ right: 110px;
 
 .input-label-password{
   position: relative;
-  right: 110px;
+  right: 125px;
 }
 
 .input-label-email{
   position: relative;
-  right: 125px;
+  right: 140px;
 }
